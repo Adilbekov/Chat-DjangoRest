@@ -4,7 +4,7 @@ from .models import Message, FrontMessage, BackMessage, DataScienceMessage
 class MessageSerializer(serializers.ModelSerializer):
     class Meta:
         model = Message
-        fields = ('id', 'from_user','to_user', 'content', 'image')
+        fields = ('id', 'from_user','to_user', 'content')
 
 class FrontSerializer(serializers.ModelSerializer):
     class Meta:
