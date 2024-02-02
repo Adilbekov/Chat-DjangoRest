@@ -8,6 +8,10 @@ class Message(models.Model):
     from_user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='sent_messages')
     to_user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='received_messages')
     content = models.TextField()
+    image = models.ImageField(
+        verbose_name='Фотография',
+        upload_to='chat_image'
+    )
 
 
     def __str__(self):
